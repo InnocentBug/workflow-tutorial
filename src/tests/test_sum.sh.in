@@ -1,56 +1,54 @@
 #!/bin/bash
 
-
-
 # Let's test that execution without arguments should fail
-`@CMAKE_CURRENT_BINARY_DIR@/main`
+@CMAKE_CURRENT_BINARY_DIR@/main
 # Test the return code of the execution to not be 0
-if [ $? -eq 0 ]; then
-    exit -1
+if [[ $? -eq 0 ]]; then
+	exit 1
 fi
 
 # Test some basic summation
-result=`@CMAKE_CURRENT_BINARY_DIR@/main 3.14`
+result=$(@CMAKE_CURRENT_BINARY_DIR@/main 3.14)
 echo $result
 
 # Check that return code is 0
-if [ ! $? -eq 0 ]; then exit -1; fi
-if [ ! "$result" = "3.14" ]; then
-    exit -2
+if [[ ! $? -eq 0 ]]; then exit 1; fi
+if [[ $result != "3.14" ]]; then
+	exit 2
 fi
 
-result=`@CMAKE_CURRENT_BINARY_DIR@/main 0.1 0.5`
+result=$(@CMAKE_CURRENT_BINARY_DIR@/main 0.1 0.5)
 echo $result
 
 # Check that return code is 0
-if [ ! $? -eq 0 ]; then exit -1; fi
-if [ ! "$result" = "0.6" ]; then
-    exit -2
+if [[ ! $? -eq 0 ]]; then exit 1; fi
+if [[ $result != "0.6" ]]; then
+	exit 2
 fi
 
-result=`@CMAKE_CURRENT_BINARY_DIR@/main 0.1 -0.1`
+result=$(@CMAKE_CURRENT_BINARY_DIR@/main 0.1 -0.1)
 echo $result
 
 # Check that return code is 0
-if [ ! $? -eq 0 ]; then exit -1; fi
-if [ ! "$result" = "0" ]; then
-    exit -2
+if [[ ! $? -eq 0 ]]; then exit 1; fi
+if [[ $result != "0" ]]; then
+	exit 2
 fi
 
-result=`@CMAKE_CURRENT_BINARY_DIR@/main 0.1 -0.15 0.5`
+result=$(@CMAKE_CURRENT_BINARY_DIR@/main 0.1 -0.15 0.5)
 echo $result
 
 # Check that return code is 0
-if [ ! $? -eq 0 ]; then exit -1; fi
-if [ ! "$result" = "0.45" ]; then
-    exit -2
+if [[ ! $? -eq 0 ]]; then exit 1; fi
+if [[ $result != "0.45" ]]; then
+	exit 2
 fi
 
-result=`@CMAKE_CURRENT_BINARY_DIR@/main -0.1 -0.15 0.05`
+result=$(@CMAKE_CURRENT_BINARY_DIR@/main -0.1 -0.15 0.05)
 echo $result
 
 # Check that return code is 0
-if [ ! $? -eq 0 ]; then exit -1; fi
-if [ ! "$result" = "-0.2" ]; then
-    exit -2
+if [[ ! $? -eq 0 ]]; then exit 1; fi
+if [[ $result != "-0.2" ]]; then
+	exit 2
 fi
