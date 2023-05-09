@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkoutv3
+        uses: actions/checkout@v3
       - name: install-dependencies
         run:
           sudo apt install g++
