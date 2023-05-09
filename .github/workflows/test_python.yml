@@ -20,8 +20,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: install test dependency
-        run: pip install pytest
+        run: python3 -m pip install pytest
       - name: install module
-        run: pip install .
+        run: python3 -m pip install .
       - name: test
-        run: python -m pytest
+        run: python3 -m pytest
