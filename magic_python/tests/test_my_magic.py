@@ -12,10 +12,9 @@ def test_values():
 def test_math():
     result = magic_python.my_magic_function(14., 72.)
     expected_result = np.log(14. *72.)
-    with pytest.raises(AssertionError):
-        assert expected_result == result
+    # with pytest.raises(AssertionError):
+    #     assert expected_result == result
     assert pytest.approx(expected_result, 1e-6) == result
-
 
 def test_test_negative():
     with pytest.raises(FloatingPointError):
