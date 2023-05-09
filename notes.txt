@@ -7,4 +7,6 @@
 	require status checks
 	require up-to-date
 3) add labels to PR, assign yourself to PR, Squash and Merge PR
-
+4) Add C++ program, but not test. Push and open PR.
+5) Add simple workflow to test
+6) Add CMake to build and test
