@@ -19,5 +19,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: install test dependency
+        run: pip install pytest
+      - name: install module
+        run: pip install .
       - name: test
-        run: python magic_python/core.py 17. 15
+        run: python -m pytest
