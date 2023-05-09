@@ -3,10 +3,9 @@ name: Test C++
 on:
   push:
     branches:
-    - main
+      - main
   pull_request:
-    branches:
-      -main
+    branches: -main
 
 jobs:
   install:
@@ -20,5 +19,3 @@ jobs:
         run: g++ src/main.cpp
       - name: test
         run: ./a.out 10 31
-
-          
