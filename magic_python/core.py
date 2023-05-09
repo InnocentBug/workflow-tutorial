@@ -1,7 +1,8 @@
 import sys
+import numpy as np
 
 def my_magic_function(x, y):
-    return x + y
+    return np.log(x) + np.log(y)
 
 def main(argv):
     if len(argv) == 0:
@@ -15,4 +16,4 @@ def main(argv):
     print(magic_result)
 
 if __name__ == "__main__":
-    exit(main(sys.argv[1:]))
+    sys.exit(main(sys.argv[1:]))
