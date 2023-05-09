@@ -1,4 +1,4 @@
-name: CI
+name: trunk check
 
 on:
   push:
