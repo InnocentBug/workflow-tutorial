@@ -6,3 +6,5 @@
 	dismiss stale,
 	require status checks
 	require up-to-date
+3) add labels to PR, assign yourself to PR, Squash and Merge PR
+
