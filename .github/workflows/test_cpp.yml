@@ -15,8 +15,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: install dependencies
-        run: sudo apt install g++
+        run: sudo apt install g++ cmake
       - name: compile
-        run: g++ src/main.cpp
+        run: |
+          cmake src
+          make
       - name: test
-        run: ./a.out 10 31
+        run: ctest --verbose
