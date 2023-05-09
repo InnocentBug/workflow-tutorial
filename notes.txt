@@ -1,0 +1,8 @@
+1) Create repo, public, MIT license, Python gitignore, clone
+2) Protect branch: Settings > Branches > Add Protection Rule
+   main,
+	require PR,
+	(require aprovals),
+	dismiss stale,
+	require status checks
+	require up-to-date
