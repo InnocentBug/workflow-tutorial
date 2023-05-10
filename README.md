@@ -18,6 +18,13 @@ The Python project is located in [`magic_python`](magic_python/) and is fully se
 
 You can check the workflow file for this project at [`.github/workflows/test_python.yml`](.github/workflows/test_python.yml).
 
+### Jupyter Notebooks
+
+Python project may be accompanied by jupyter notebooks, usually we want to make sure that these notebooks do not break during the development of the project.
+So an automated test of the notebooks is a good idea.
+
+You can check the workflow file that automatically runs a jupyter notebooks here [`.github/workflows/test_jupyter.yml`](.github/workflows/test_jupyter.yml).
+
 ## Trunk
 
 We use [trunk.io](https://trunk.io) to manage formatting and software engineering. It is free for open-source projects; please refer to their website for more details.
